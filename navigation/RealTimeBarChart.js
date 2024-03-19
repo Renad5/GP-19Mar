@@ -50,6 +50,10 @@ const RealTimeBarChart = () => {
   );
 };
 
+#^ Basma's comment.
+
+##################################
+
 export default RealTimeBarChart;*/
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
@@ -121,4 +125,5 @@ const styles = StyleSheet.create({
 });
 
 export default RealTimeBarChart;
-
+    
+   

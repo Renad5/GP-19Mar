@@ -175,12 +175,15 @@ export default function LoginScreen() {
           <TouchableOpacity style={styles.loginButton} onPress={handleSubmit}>
             <Text style={styles.loginButtonText}>تسجيل الدخول</Text>
           </TouchableOpacity>
+
+
           <View style={styles.signUpContainer}>
-            <Text style={styles.signUpText}>مستخدم جديد؟</Text>
-            <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
-              <Text style={styles.signUpLink}>انشئ حساب</Text>
-            </TouchableOpacity>
-          </View>
+  <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
+    <Text style={styles.signUpLink}>انشئ حساب</Text>
+  </TouchableOpacity>
+  <Text style={styles.signUpText}>مستخدم جديد؟</Text>
+</View>
+          
         </View>
       </SafeAreaView>
     </View>
@@ -197,16 +200,17 @@ const styles = StyleSheet.create({
   },
   safeAreaView: {
     flex: 1,
-    
+    backgroundColor: 'white',
+    borderTopRightRadius: 50,
+    borderTopLeftRadius: 50,
+    marginTop:50,
   },
 
   content: {
     flex: 1,
     paddingHorizontal: 24,
-    paddingTop: 32,
-    backgroundColor: 'white',
-    borderTopRightRadius: 50,
-    borderTopLeftRadius: 50,
+    //paddingTop: 15,
+    
   },
   emailLabel: {
     fontSize: 16,
@@ -258,14 +262,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     marginTop: 24,
+    
   },
   signUpText: {
     marginRight: 8,
-    fontWeight: '600'
+    fontWeight: '600',
+    marginLeft: 5,
   },
   signUpLink: {
     color: themeColors.lightb, 
     textDecorationLine: 'underline',
+    
   },
    rememberMeButton: {
     flexDirection: 'row',
@@ -299,5 +306,4 @@ const styles = StyleSheet.create({
 
   },
 });
-
 

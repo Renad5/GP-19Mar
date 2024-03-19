@@ -9,6 +9,7 @@ import TopNavBar2 from '../navigation/TopNavBar2';
 import { useNavigation } from '@react-navigation/native';
 import { doc, setDoc,collection, addDoc,query, where, getDocs } from 'firebase/firestore';
 import { db } from '../config/firebase';
+import { KeyboardAvoidingView } from 'react-native';
 
 
 export default function SignUpScreen() {
@@ -187,6 +188,7 @@ export default function SignUpScreen() {
 
 
     return (
+        <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === "ios" ? "padding" : null}>
         <View style={styles.container}>
             <TopNavBar2 />
             <ScrollView style={styles.scrollView}>
@@ -296,7 +298,7 @@ export default function SignUpScreen() {
                 </View>
                 
             </ScrollView>
-        </View>
+        </View></KeyboardAvoidingView>
     );
 }
 
