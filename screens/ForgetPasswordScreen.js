@@ -7,7 +7,8 @@ import {
   TextInput,
   TouchableOpacity,
   Pressable,
-} from "react-native";
+} 
+from "react-native";
 import React, { useState } from "react";
 import { themeColors } from "../theme";
 import { sendPasswordResetEmail } from "firebase/auth";
